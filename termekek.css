@@ -1,0 +1,297 @@
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.lines {
+    position: fixed;
+    height: 6.5%;
+    opacity: 1;
+    transition: opacity 0.01s ease-in-out;
+}
+
+.logo {
+    width: 400px; /* Fix szélesség */
+    height: 200px; /* Fix magasság */
+    min-width: 400px; /* Minimális szélesség */
+    max-width: 400px; /* Maximális szélesség */
+    min-height: 200px; /* Minimális magasság */
+    max-height: 200px; /* Maximális magasság */
+    flex-shrink: 0; /* Ne zsugorodjon */
+    object-fit: contain; /* Kép arányainak megtartása */
+    transform: scale(1); /* Letiltjuk a méretváltozást */
+    user-select: none;
+}
+
+
+.sidebar {
+    top: 150px; /* A header magassága (150px) alatt kezdõdik */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    left: 0;
+    width: 100%; /* 100% szélesség */
+    height: 30px; /* Fix magasság */
+    background-color: #222;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 0rem 0 0 0rem;
+    transition: height 0.8s ease;
+    position: fixed; /* Fix pozíció */
+    margin-left: 0px;
+    z-index: 999;
+    opacity: 0.9;
+}
+
+    .sidebar:hover {
+        height: 100px;
+    }
+
+        .sidebar:hover .boton-elegante {
+            opacity: 1;
+        }
+
+        .sidebar:hover .menu {
+            opacity: 1;
+        }
+
+        .sidebar:hover .stock-ticker {
+            opacity: 0;
+        }
+
+.boton-elegante {
+    padding: 15px 40px;
+    border: 5px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Book Antiqua';
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    width: auto; /* Gombok szélessége automatikusan igazodik */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+    .boton-elegante::after {
+        content: "";
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient( circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70% );
+        transform: scale(0);
+        transition: transform 0.5s ease;
+    }
+
+    .boton-elegante:hover::after {
+        transform: scale(4);
+    }
+
+    .boton-elegante:hover {
+        border-color: #666666;
+        background: #292929;
+        opacity: 1;
+    }
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Térköz a gombok között */
+    position: relative;
+    z-index: 10001
+}
+
+.menu {
+    font-family: "Chalkduser", fantasy;
+    color: white;
+    font-size: 50px;
+    margin-right: 20px; /* Térköz a "Menü" felirat és a gombok között */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: left;
+    width: auto; /* Ne legyen 100% szélességû */
+}
+
+.stock-ticker {
+    font-size: 20px;
+    padding-block: 8px;
+    user-select: none;
+    --gap: 800px;
+    display: flex;
+    gap: var(--gap);
+    white-space: nowrap;
+    width: 100%; /* Két lista szélessége */
+    overflow: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+    .stock-ticker ul {
+        list-style: none;
+        white-space: nowrap;
+        overflow: visible;
+        flex-shrink: 0;
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem; /* Térköz eltávolítása */
+        animation: scroll 30s linear infinite;
+    }
+
+        .stock-ticker ul li {
+            margin-right: 10px; /* Térköz a lista elemek között */
+        }
+
+    .stock-ticker:hover ul {
+        animation-play-state: paused;
+    }
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap))); /* Animáció pontos beállítása */
+    }
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    width: 100%;
+    height: 150px; /* Fix magasság */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid #5f6a6a;
+    background-color: white;
+    padding: 15px 0;
+    box-sizing: border-box;
+    color: #fff;
+    position: fixed;
+    top: 0;
+}
+
+.userbutton {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1e23;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section-title {
+    font-size: 36px; /* Szöveg mérete */
+    color: white; /* Szöveg színe */
+    font-weight: bold; /* Szöveg vastagsága */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Szöveg árnyéka */
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 30px; /* Térköz a konténer szélei és a kártyák között */
+    text-align: center;
+    margin-top: 150px;
+}
+
+.card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 300px; /* Fix szélesség */
+    height: 500px; /* Fix magasság */
+    overflow: hidden; /* A tartalom ne lógjon ki */
+    border-radius: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.9) saturate(1) contrast(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#zoldseg {
+    background-size: 400px;
+}
+
+#cow {
+    background-size: 500px;
+}
+
+#jam {
+    background-size: 900px;
+}
+
+.card:hover .card-background {
+    transform: scale(1.15) translateZ(0);
+    background-size: 260px;
+}
+
+.card-container:hover .card:not(:hover) {
+    transform: scale(.9);
+}
+
+    .card-container:hover .card:not(:hover) .card-background {
+        filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+        transform: scale(0.9);
+    }
+
+.content {
+    top: 50%;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+}
+
+card-category {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card-heading {
+    color: white;
+    font-size: 45px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
