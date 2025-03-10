@@ -14,27 +14,27 @@ body {
 }
 
 .logo {
-    width: 400px; /* Fix szélesség */
-    height: 200px; /* Fix magasság */
-    min-width: 400px; /* Minimális szélesség */
-    max-width: 400px; /* Maximális szélesség */
-    min-height: 200px; /* Minimális magasság */
-    max-height: 200px; /* Maximális magasság */
+    width: 400px; /* Fix szÃ©lessÃ©g */
+    height: 200px; /* Fix magassÃ¡g */
+    min-width: 400px; /* MinimÃ¡lis szÃ©lessÃ©g */
+    max-width: 400px; /* MaximÃ¡lis szÃ©lessÃ©g */
+    min-height: 200px; /* MinimÃ¡lis magassÃ¡g */
+    max-height: 200px; /* MaximÃ¡lis magassÃ¡g */
     flex-shrink: 0; /* Ne zsugorodjon */
-    object-fit: contain; /* Kép arányainak megtartása */
-    transform: scale(1); /* Letiltjuk a méretváltozást */
+    object-fit: contain; /* KÃ©p arÃ¡nyainak megtartÃ¡sa */
+    transform: scale(1); /* Letiltjuk a mÃ©retvÃ¡ltozÃ¡st */
     user-select: none;
 }
 
 
 .sidebar {
-    top: 150px; /* A header magassága (150px) alatt kezdõdik */
+    top: 150px; /* A header magassÃ¡ga (150px) alatt kezdÃµdik */
     display: flex;
     align-items: center;
     justify-content: flex-start;
     left: 0;
-    width: 100%; /* 100% szélesség */
-    height: 30px; /* Fix magasság */
+    width: 100%; /* 100% szÃ©lessÃ©g */
+    height: 30px; /* Fix magassÃ¡g */
     background-color: #222;
     padding: 20px;
     box-sizing: border-box;
@@ -42,7 +42,7 @@ body {
     overflow: hidden;
     border-radius: 0rem 0 0 0rem;
     transition: height 0.8s ease;
-    position: fixed; /* Fix pozíció */
+    position: fixed; /* Fix pozÃ­ciÃ³ */
     margin-left: 0px;
     z-index: 999;
     opacity: 0.9;
@@ -78,7 +78,7 @@ body {
     position: relative;
     overflow: hidden;
     font-weight: bold;
-    width: auto; /* Gombok szélessége automatikusan igazodik */
+    width: auto; /* Gombok szÃ©lessÃ©ge automatikusan igazodik */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -107,7 +107,7 @@ body {
 
 .button-container {
     display: flex;
-    gap: 10px; /* Térköz a gombok között */
+    gap: 10px; /* TÃ©rkÃ¶z a gombok kÃ¶zÃ¶tt */
     position: relative;
     z-index: 10001
 }
@@ -116,11 +116,11 @@ body {
     font-family: "Chalkduser", fantasy;
     color: white;
     font-size: 50px;
-    margin-right: 20px; /* Térköz a "Menü" felirat és a gombok között */
+    margin-right: 20px; /* TÃ©rkÃ¶z a "MenÃ¼" felirat Ã©s a gombok kÃ¶zÃ¶tt */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: left;
-    width: auto; /* Ne legyen 100% szélességû */
+    width: auto; /* Ne legyen 100% szÃ©lessÃ©gÃ» */
 }
 
 .stock-ticker {
@@ -131,7 +131,7 @@ body {
     display: flex;
     gap: var(--gap);
     white-space: nowrap;
-    width: 100%; /* Két lista szélessége */
+    width: 100%; /* KÃ©t lista szÃ©lessÃ©ge */
     overflow: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
@@ -146,12 +146,12 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2rem; /* Térköz eltávolítása */
-        animation: scroll 30s linear infinite;
+        gap: 2rem; /* TÃ©rkÃ¶z eltÃ¡volÃ­tÃ¡sa */
+        animation: scroll 60s linear infinite;
     }
 
         .stock-ticker ul li {
-            margin-right: 10px; /* Térköz a lista elemek között */
+            margin-right: 10px; /* TÃ©rkÃ¶z a lista elemek kÃ¶zÃ¶tt */
         }
 
     .stock-ticker:hover ul {
@@ -160,7 +160,7 @@ body {
 
 @keyframes scroll {
     to {
-        transform: translateX(calc(-100% - var(--gap))); /* Animáció pontos beállítása */
+        transform: translateX(calc(-100% - var(--gap))); /* AnimÃ¡ciÃ³ pontos beÃ¡llÃ­tÃ¡sa */
     }
 }
 
@@ -172,7 +172,7 @@ body {
 
 .header {
     width: 100%;
-    height: 150px; /* Fix magasság */
+    height: 150px; /* Fix magassÃ¡g */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,11 +217,11 @@ body {
     }
 
 .slider-image {
-    position: relative; /* Hozzáadva, hogy a pseudo-elem és a szöveg pozicionálható legyen */
+    position: relative; /* HozzÃ¡adva, hogy a pseudo-elem Ã©s a szÃ¶veg pozicionÃ¡lhatÃ³ legyen */
     display: flex;
-    align-items: center; /* Függõleges középre igazítás */
-    justify-content: left; /* Vízszintes középre igazítás */
-    overflow: hidden; /* Biztosítja, hogy a tartalom ne lógjon ki */
+    align-items: center; /* FÃ¼ggÃµleges kÃ¶zÃ©pre igazÃ­tÃ¡s */
+    justify-content: left; /* VÃ­zszintes kÃ¶zÃ©pre igazÃ­tÃ¡s */
+    overflow: hidden; /* BiztosÃ­tja, hogy a tartalom ne lÃ³gjon ki */
 }
 
     .slider-image::before {
@@ -230,19 +230,19 @@ body {
         top: 0;
         left: 0;
         width: 35%;
-        height: 100%; /* A kép negyedét takarja ki */
-        background: rgba(0, 0, 0, 0.5); /* Fekete, enyhén áttetszõ réteg */
-        z-index: 1; /* Biztosítja, hogy a réteg a kép felett legyen */
-        pointer-events: none; /* Biztosítja, hogy a réteg ne blokkolja a kattintásokat */
+        height: 100%; /* A kÃ©p negyedÃ©t takarja ki */
+        background: rgba(0, 0, 0, 0.5); /* Fekete, enyhÃ©n Ã¡ttetszÃµ rÃ©teg */
+        z-index: 1; /* BiztosÃ­tja, hogy a rÃ©teg a kÃ©p felett legyen */
+        pointer-events: none; /* BiztosÃ­tja, hogy a rÃ©teg ne blokkolja a kattintÃ¡sokat */
     }
 
 .slider-text {
-    position: relative; /* A szöveg legyen a réteg felett */
-    z-index: 2; /* Biztosítja, hogy a szöveg az áttetszõ réteg felett legyen */
-    font-size: 2rem; /* Szöveg mérete */
-    text-align: left; /* Szöveg középre igazítása */
-    text-shadow: 2px 2px 5px black; /* Szöveg árnyéka */
-    padding: 65px; /* Térköz a szöveg körül */
+    position: relative; /* A szÃ¶veg legyen a rÃ©teg felett */
+    z-index: 2; /* BiztosÃ­tja, hogy a szÃ¶veg az Ã¡ttetszÃµ rÃ©teg felett legyen */
+    font-size: 2rem; /* SzÃ¶veg mÃ©rete */
+    text-align: left; /* SzÃ¶veg kÃ¶zÃ©pre igazÃ­tÃ¡sa */
+    text-shadow: 2px 2px 5px black; /* SzÃ¶veg Ã¡rnyÃ©ka */
+    padding: 65px; /* TÃ©rkÃ¶z a szÃ¶veg kÃ¶rÃ¼l */
     color: whitesmoke;
     font-size:50px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
