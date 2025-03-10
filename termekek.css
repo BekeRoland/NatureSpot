@@ -216,11 +216,11 @@ body {
 
 .card-container {
     display: flex;
-    gap: 200px;
+    gap: 50px;
     justify-content: center;
     padding: 30px; /* Térköz a konténer szélei és a kártyák között */
     text-align: center;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 .card {
